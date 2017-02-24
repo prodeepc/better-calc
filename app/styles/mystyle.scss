@@ -5,6 +5,9 @@
     margin: auto;
     .calc {
         background:rgba(0,0,0,0.3);
+        .input-text {
+            text-align: right;
+        }
         .calc-desk {
             background: #ececec;
             padding: 10px;

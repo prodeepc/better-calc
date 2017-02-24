@@ -3,20 +3,20 @@
         <div class="calc-desk col-sm-6">
             <div>
                 <div class="form-group">
-                    <input class="form-control" type="text" name="search-text" ng-model="input" value="">
+                    <input class="form-control input-text" ng-model="calculateStr" type="text" name="search-text" ng-model="input" value="">
                 </div>
             </div>
             <div class="btn-container">
                 <div class="btn-panel">
-                    <div class="btn btn-default pull-left calc-btns" ng-repeat="item in controls.scientifics track by $index"> <span ng-bind="item">-</span> </div>
+                    <div class="btn btn-default pull-left calc-btns" ng-repeat="item in controls.scientifics track by $index"> <span ng-bind="item.label">-</span> </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="btn-panel">
-                    <div class="btn btn-default pull-left calc-btns" ng-repeat="item in controls.digits track by $index"> <span ng-bind="item">-</span> </div>
+                    <div class="btn btn-default pull-left calc-btns" ng-repeat="item in controls.digits track by $index" ng-click="setItem(item)"> <span ng-bind="item.label">-</span> </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="btn-panel liquid">
-                    <div class="btn btn-default pull-left calc-btns" ng-repeat="item in controls.operators track by $index"> <span ng-bind="item">-</span> </div>
+                    <div class="btn btn-default pull-left calc-btns" ng-repeat="item in controls.operators track by $index" ng-click="setAction(item)"> <span ng-bind="item.label">-</span> </div>
                     <div class="clearfix"></div>
                 </div>
                 <div class="clearfix"></div>

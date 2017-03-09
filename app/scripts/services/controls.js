@@ -8,51 +8,159 @@
 * Service in the betterCalcApp.
 */
 angular.module('betterCalcApp')
-.service('controls', function () {
+.service('controls', function() {
     return {
         data: {
-            scientifics: [
-                {label: '-', value: ''},
-                {label: '-', value: ''},
-                {label: '-', value: ''},
-                {label: 'Inv', value: ''},
-                {label: 'sin', value: ''},
-                {label: 'In', value: ''},
-                {label: 'π', value: ''},
-                {label: 'cos', value: ''},
-                {label: 'log', value: ''},
-                {label: 'e', value: ''},
-                {label: 'tan', value: ''},
-                {label: '√', value: ''},
-                {label: 'Ans', value: ''},
-                {label: 'Exp', value: ''},
-                {label: 'xy', value: ''}
-            ],
-            digits: [
-                {label: '(', value: '('},
-                {label: ')', value: ')'},
-                {label: '%', value: '%'},
-                {label: '9', value: '9'},
-                {label: '8', value: '8'},
-                {label: '7', value: '7'},
-                {label: '6', value: '6'},
-                {label: '5', value: '5'},
-                {label: '4', value: '4'},
-                {label: '3', value: '3'},
-                {label: '2', value: '2'},
-                {label: '1', value: '1'},
-                {label: '0', value: '0'},
-                {label: '.', value: '.'},
-                {label: '=', value: '='}
-            ],
-            operators: [
-                {label: 'AC', value: 'clear'},
-                {label: '÷', value: 'divide'},
-                {label: 'x', value: 'multiply'},
-                {label: '-', value: 'substract'},
-                {label: '+', value: 'addition'}
-            ]
+            scientifics: [{
+                label: '-',
+                value: '',
+                enable: true
+            }, {
+                label: '-',
+                value: '',
+                enable: true
+            }, {
+                label: '-',
+                value: '',
+                enable: true
+            }, {
+                label: 'Inv',
+                value: '',
+                enable: true
+            }, {
+                label: 'sin',
+                value: '',
+                enable: true
+            }, {
+                label: 'In',
+                value: '',
+                enable: true
+            }, {
+                label: 'π',
+                value: '',
+                enable: true
+            }, {
+                label: 'cos',
+                value: '',
+                enable: true
+            }, {
+                label: 'log',
+                value: '',
+                enable: true
+            }, {
+                label: 'e',
+                value: '',
+                enable: true
+            }, {
+                label: 'tan',
+                value: '',
+                enable: true
+            }, {
+                label: '√',
+                value: '',
+                enable: true
+            }, {
+                label: 'Ans',
+                value: '',
+                enable: true
+            }, {
+                label: 'Exp',
+                value: '',
+                enable: true
+            }, {
+                label: 'xy',
+                value: '',
+                enable: true
+            }],
+            digits: [{
+                label: '(',
+                value: '(',
+                enable: false
+            }, {
+                label: ')',
+                value: ')',
+                enable: false
+            }, {
+                label: '%',
+                value: '%',
+                enable: false
+            }, {
+                label: '9',
+                value: '9',
+                enable: true
+            }, {
+                label: '8',
+                value: '8',
+                enable: true
+            }, {
+                label: '7',
+                value: '7',
+                enable: true
+            }, {
+                label: '6',
+                value: '6',
+                enable: true
+            }, {
+                label: '5',
+                value: '5',
+                enable: true
+            }, {
+                label: '4',
+                value: '4',
+                enable: true
+            }, {
+                label: '3',
+                value: '3',
+                enable: true
+            }, {
+                label: '2',
+                value: '2',
+                enable: true
+            }, {
+                label: '1',
+                value: '1',
+                enable: true
+            }, {
+                label: '0',
+                value: '0',
+                enable: true
+            }, {
+                label: '.',
+                value: '.',
+                enable: true
+            }, {
+                label: '=',
+                value: '=',
+                enable: true,
+                type: 'calculator'
+            }],
+            operators: [{
+                label: 'AC',
+                action: 'clear',
+                enable: true,
+                value: '',
+                type: 'clear'
+            }, {
+                label: '÷',
+                action: 'divide',
+                enable: true,
+                value: '÷'
+            }, {
+                label: 'x',
+                action: 'multiply',
+                enable: true,
+                value: 'x'
+            }, {
+                label: '-',
+                action: 'subtract',
+                enable: true,
+                value: '-'
+            }, {
+                label: '+',
+                action: 'addition',
+                enable: true,
+                value: '+'
+            }]
         }
     }
-    // AngularJS will instantiate a singleton by calling "new" on this function
 });

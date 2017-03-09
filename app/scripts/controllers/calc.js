@@ -13,13 +13,19 @@ angular.module('betterCalcApp')
         $scope.calculateStr = "";
 
         $scope.setItem = function(item) {
-            $scope.calculateStr += item.value;
+            if(item.type == 'clear') {
+                $scope.calculateStr = operations.clear($scope.calculateStr);
+            } else if(item.type == 'calculator') {
+                $scope.calculateStr = operations.calculate($scope.calculateStr);
+            } else {
+                $scope.calculateStr += item.value;
+            }
         }
 
         $scope.setAction = function(item) {
             $scope.calculateStr = operations[item.value]($scope.calculateStr);
         }
-        
+
         $scope.controls = controls.data;
     }
 ]);
